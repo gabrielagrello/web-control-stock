@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif; 
+}
+
+body{
+    background-color: var(--corBranca);
+}
+
+:root {
+    --corOffWhite : #E3E3E3;
+    --corBranca :#FFF;
+    --corAzul : #0099ff;
+    --corPreta : #000000;
+    --corVerde: #adff2f;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/*Estilização da Header*/
+header {
+   background-color: var(--corBranca);
+   padding: 10px 20px;
+}
+
+header .interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img{
+    max-width: 75px;
+}
+
+header .menu nav ul{
+    list-style-type: none;
+}
+
+header .menu nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 17px;
+}
+
+header .menu nav ul li a{
+    color: var(--corPreta);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+.menu nav a:hover{
+    transform: scale(1.05);
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--corAzul) ;
+    font-weight: 750;
+}
+
+/* Estilização Intro */
+section.intro-site{
+    background-color: var(--corBranca);
+    padding: 30px 20px;
+}
+
+section.intro-site h2 {
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section.intro-site form{
+    display: flex;
+    flex-direction: column; /* campos em coluna */
+    gap: 15px; /* espaçamento */
+    max-width: 400px;
+    margin: auto;
+}
+
+section.intro-site .row {
+  display: flex;
+  gap: 15px;
+}
+
+section.intro-site input[type="text"],
+section.intro-site input[type="number"] {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+section.intro-site input[type="submit"]{
+    background-color: var(--corPreta);
+    color: var(--corBranca);
+    padding: 12px 28px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+section.intro-site input[type="submit"]:hover {
+  background-color: var(--corAzul);
+  transform: scale(1.02);
+}
