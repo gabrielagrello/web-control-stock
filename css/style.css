@@ -85,6 +85,10 @@ section.intro-site form{
     margin: auto;
 }
 
+section.intro-site form .row p {
+    font-weight: 600;
+}
+
 section.intro-site .row {
   display: flex;
   gap: 15px;
