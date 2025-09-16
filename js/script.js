@@ -19,7 +19,12 @@ frm.addEventListener("submit" , (e) => {
 
     //Criar a linha
     const row = document.createElement("tr")
-    row.innerHTML = `<td>${product}</td><td>${quantity}</td>`
+    row.innerHTML = `<td>${product}</td>
+    <td>${quantity}</td>
+    <td class = "actions">
+    <button class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+    <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+    </td>`
 
     stockTable.appendChild(row)
 
