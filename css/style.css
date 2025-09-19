@@ -144,9 +144,43 @@ section.stocklist thead {
     background-color: var(--corAzul);
 }
 
-section.th, td {
+section.stocklist th, td {
     padding: 12px 16px;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.stocklist td:first-child {
+    text-align: left; /* alinhar nome do produto*/
+}
+
+.stocklist td:nth-child(2) {
+    text-align: center; /* alinhar quantidade*/
+}
+
+.stocklist td.acoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.stocklist th:first-child,
+.stocklist td:first-child {
+    width: 60%;
     text-align: left;
+}
+
+.stocklist th:nth-child(2),
+.stocklist td:nth-child(2) {
+    width: 20%;
+}
+
+.stocklist th:last-child,
+.stocklist td:last-child {
+    text-align: center;
 }
 
 section.stocklist th {
@@ -192,6 +226,29 @@ section.stocklist .actions button:hover{
     color: var(--corVermelha);
 }
 
+/*Caixa de Busca*/
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-box input{
+    width: 300px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/*Mostrar/Ocultar o Estoque*/
+#estoque {
+    display: none;
+}
+
+#estoque.ativo{
+    display: block;
+}
 
 
 

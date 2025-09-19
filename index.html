@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!--Font Awesome Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!--Font Awesome Link-->
     <title>Stock Control</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
                 <nav>
                     <ul>
                         <li><a href="#">Início</a></li>
-                        <li><a href="#">Ver Estoque</a></li>
+                        <li><a href="#estoque" id="linkStock">Ver Estoque</a></li>
                     </ul>
                 </nav>
             </section>
@@ -44,9 +44,12 @@
         </form>
     </section>
 
-    <section class="stocklist">
+    <section class="stocklist" id="estoque">
         <div class="interface">
             <h2>Produtos em Estoque</h2>
+            <div class = "search-box">
+                <input type="text" id="inSearch" placeholder="Buscar Produto...">
+            </div>
             <table>
                 <thead>
                     <tr>
