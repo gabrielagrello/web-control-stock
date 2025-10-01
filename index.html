@@ -3,68 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!--Font Awesome Link-->
     <title>Stock Control</title>
 </head>
 <body>
 
-    <header>
+    <header role="banner">
         <div class="interface">
-            <section class="logo">
-                <img src="images/icone-de-cor-do-erp-de-controle-de-estoque-entrega-de-encomendas_8071-53103.jpg" alt="Logo Site">
-            </section>
+            <div class="logo">
+                <img src="src/images/icone-de-cor-do-erp-de-controle-de-estoque-entrega-de-encomendas_8071-53103.jpg" alt="Logo Site">
+            </div>
 
-            <section class="menu">
-                <nav>
+                <nav class="menu" role="navigation" aria-label="Menu principal">
                     <ul>
-                        <li><a href="#">Início</a></li>
+                        <li><a href="#" aria-current="page">Início</a></li>
                         <li><a href="#estoque" id="linkStock">Ver Estoque</a></li>
                     </ul>
-                </nav>
-            </section>
+                </nav>          
         </div>
     </header>
 
-    <section class="intro-site">
+    <main>
+    <section class="intro-site" aria-labelledby="add-product-title">
         <div class="interface">
-            <h2>Adicionar Produto</h2>
-        <form action="#">
-            <div class="row"> 
-                <p>Produto:
-                <input type="text" name="" id="inProduct">
-            </p>
-
-            <p>Quantidade a Adicionar:
-                <input type="number" name="" id="inQuantity">
-            </p>
-        </div>
+            <h2 id="add-product-title">Adicionar Produto</h2>
+        <form id="product-form" role="form" aria-labelledby="add-product-title">
+            <div class="form-group"> 
+                <label for="inProduct">Produto:</label>
+                <input type="text" name="product" id="inProduct" required aria-required="true" placeholder="Digite o nome do produto">
+            </div>
             
-            <input type="submit" value="Adicionar">
+
+            <div class="form-group">
+            <label for="inQuantity">Quantidade a Adicionar: 
+            </label>
+                <input type="number" name="quantity" id="inQuantity" required aria-required="true" min="1" value="1">
+           </div>
+            
+            <button type="submit" class= "btn-primary">Adicionar Produto</button>
         </form>
     </section>
 
-    <section class="stocklist" id="estoque">
+    <section class="stocklist" id="estoque" aria-labelledby="stock-title">
         <div class="interface">
-            <h2>Produtos em Estoque</h2>
+            <h2 id="stock-title">Produtos em Estoque</h2>
             <div class = "search-box">
                 <input type="text" id="inSearch" placeholder="Buscar Produto...">
             </div>
-            <table>
+            <table role="grid" aria-labelledby="stock-title">
+              <caption class="sr-only">Lista de Produtos em estoque</caption>
                 <thead>
                     <tr>
-                        <th>Produto</th>
-                        <th>Quantidade</th>
-                        <th>Ações</th>
+                        <th scope="col" role="columnheader">Produto</th>
+                        <th scope="col" role="columnheader">Quantidade</th>
+                        <th scope="col" role="columnheader">Ações</th>
                     </tr>
                 </thead>
-                <tbody id="bodyStockTable">
+                <tbody id="bodyStockTable" role="rowgroup">
                     <!--JS Insere as linhas-->
                 </tbody>
             </table>
         </div>
     </section>
+    </main>
 
-    <script src="js/script.js"></script>
+    <script src="src/js/script.js"></script>
 </body>
 </html>
